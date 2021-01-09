@@ -1,8 +1,8 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 //const api_helper = require('../helpers/APIHelper')
 
-router.get('/getAPIResponse', function(req, res, next) {
+router.get('/api', function(req, res, next) {
     res.render('index', { title: 'Express' });
     /* 
     api_helper.make_API_call('https://jsonplaceholder.typicode.com/todos/1')
