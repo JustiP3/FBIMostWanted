@@ -6,7 +6,7 @@ const api_helper = require('../helpers/APIHelper')
 router.get('/', function(req, res, next) {
   api_helper.make_API_call('https://api.fbi.gov/wanted/v1/list')
     .then(response => {
-        res.json(response)
+        res.send(response)
        
     })
     .catch(error => {
