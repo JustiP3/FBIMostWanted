@@ -4,7 +4,7 @@ const api_helper = require('../helpers/APIHelper')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  
+    /*
     const resp = {
         total: 935,
         items: [
@@ -140,18 +140,16 @@ router.get('/', function(req, res, next) {
    
    
     res.send(resp)
-  
-  /*  
-  TEMP COMMENT OUT FOR DEVELOPMENT. USE TEST RESP
+  */
+
     api_helper.make_API_call('https://api.fbi.gov/wanted/v1/list')
     .then(response => {
-        res.send(response)
-       
+        res.send(response)       
     })
     .catch(error => {
         res.send(error)
     })
-    */
+    
 });
 
 router.get('/api', function(req, res, next) {
